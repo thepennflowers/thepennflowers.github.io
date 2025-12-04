@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import LottieAnimation from "./LottieAnimation";
 import { ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -23,13 +22,6 @@ const Hero = () => {
           "linear-gradient(90deg, hsla(24, 100%, 83%, 1) 0%, hsla(341, 91%, 68%, 1) 100%)",
       }}
     >
-      {/* <div className="absolute inset-0 z-0">
-        <LottieAnimation
-          src="/header-animation.json"
-          id="hero-animation"
-          className="w-full h-full object-cover"
-        />
-      </div> */}
 
       <div
         className={cn(
@@ -44,6 +36,7 @@ const Hero = () => {
             alt="ThePennFlowers Logo"
             // Adjusted logo size for mobile
             className="w-34 h-32 sm:w-46 sm:h-44 rounded-full"
+            fetchPriority="high"
           />
         </div>
 

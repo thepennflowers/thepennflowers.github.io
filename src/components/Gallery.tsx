@@ -35,7 +35,7 @@ const arrangements = [
   },
 ];
 
-const ImageShowcaseSection = () => {
+const Gallery = () => {
   return (
     <section className="w-full pt-0 pb-8 sm:pb-12 bg-white" id="showcase">
       <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
@@ -44,11 +44,11 @@ const ImageShowcaseSection = () => {
             Fresh Beauty in Every Arrangement
           </h2>
           <p className="text-base sm:text-lg text-gray-600">
-            Our expert florists carefully craft each arrangement using the freshest flowers 
+            Our expert florists carefully craft each arrangement using the freshest flowers
             to create stunning displays that brighten any space.
           </p>
         </div>
-        
+
         <div className="mx-auto max-w-4xl animate-on-scroll">
           <Carousel
             opts={{
@@ -63,10 +63,11 @@ const ImageShowcaseSection = () => {
                   <div className="p-1">
                     <Card className="rounded-2xl sm:rounded-3xl overflow-hidden shadow-elegant">
                       <CardContent className="p-0">
-                        <img 
-                          src={arrangement.src} 
-                          alt={arrangement.alt} 
+                        <img
+                          src={arrangement.src}
+                          alt={arrangement.alt}
                           className="w-full h-auto object-cover"
+                          loading="lazy"
                         />
                         <div className="bg-white p-4 sm:p-8">
                           <h3 className="text-xl sm:text-2xl font-display font-semibold mb-3 sm:mb-4">{arrangement.title}</h3>
@@ -89,4 +90,4 @@ const ImageShowcaseSection = () => {
   );
 };
 
-export default ImageShowcaseSection;
+export default Gallery;

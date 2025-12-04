@@ -35,44 +35,68 @@ const testimonials: TestimonialProps[] = [{
   backgroundImage: "/background-section1.png"
 }];
 
-const TestimonialCard = ({
-  content,
-  author,
-  role,
-  backgroundImage = "/background-section1.png"
-}: TestimonialProps) => {
-  return <div className="bg-cover bg-center rounded-lg p-8 h-full flex flex-col justify-between text-white transform transition-transform duration-300 hover:-translate-y-2 relative overflow-hidden" style={{
-    backgroundImage: `url('${backgroundImage}')`
-  }}>      
-      <div className="relative z-0">
-        <p className="text-xl mb-8 font-medium leading-relaxed pr-20">{`"${content}"`}</p>
-        <div>
-          <h4 className="font-semibold text-xl">{author}</h4>
-          <p className="text-white/80">{role}</p>
-        </div>
-      </div>
-    </div>;
-};
-
 const Testimonials = () => {
-  const sectionRef = useRef<HTMLDivElement>(null);
-
-  return <section className="py-12 bg-white relative" id="testimonials" ref={sectionRef}> {/* Reduced from py-20 */}
-      <div className="section-container opacity-0 animate-on-scroll">
-        <div className="flex items-center gap-4 mb-6">
-            <div className="pulse-chip">
-              <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-pulse-500 text-white mr-2">💕</span>
+  return (
+    <section className="py-12 sm:py-20 bg-white" id="testimonials">
+      <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
+        <div className="mb-10 sm:mb-16 md:mb-20">
+          <div className="flex items-center gap-4 mb-4">
+            <div className="pulse-chip opacity-0 animate-fade-in" style={{
+              animationDelay: "0.1s"
+            }}>
+              <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-white text-pulse-500 mr-2">💕</span>
               <span>Happy Customers</span>
             </div>
+          </div>
+
+          <h2 className="section-title text-3xl sm:text-4xl md:text-5xl font-display font-bold mb-6">
+            What customers say
+          </h2>
         </div>
-        
-        <h2 className="text-5xl font-display font-bold mb-12 text-left">What customers say</h2>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {testimonials.map((testimonial, index) => <TestimonialCard key={index} content={testimonial.content} author={testimonial.author} role={testimonial.role} gradient={testimonial.gradient} backgroundImage={testimonial.backgroundImage} />)}
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+          {testimonials.map((testimonial, index) => (
+            <div
+              key={index}
+              className="group relative overflow-hidden rounded-3xl h-auto min-h-[300px] sm:h-auto sm:aspect-[16/9] opacity-0 animate-fade-in"
+              style={{
+                animationDelay: `${0.2 + (index * 0.1)}s`
+              }}
+            >
+              {/* Background Image */}
+              <div
+                className="absolute inset-0 z-0"
+                style={{
+                  backgroundImage: `url('/review-background.png')`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
+              />
+
+              {/* Overlay for readability */}
+              <div className="absolute inset-0 bg-white/40 backdrop-blur-[2px] z-0" />
+
+              {/* Content - Simple layout directly in card */}
+              <div className="relative z-10 p-4 sm:p-6 md:p-8 flex flex-col justify-center items-center text-center h-full min-h-[inherit]">
+                <p className="text-gray-900 text-sm sm:text-lg font-medium leading-relaxed mb-6">
+                  "{testimonial.content}"
+                </p>
+
+                <div className="flex flex-col items-center gap-1">
+                  <span className="text-pulse-600 font-bold text-base sm:text-lg">
+                    {testimonial.author}
+                  </span>
+                  <span className="text-gray-600 text-sm font-medium">
+                    {testimonial.role}
+                  </span>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
 
 export default Testimonials;

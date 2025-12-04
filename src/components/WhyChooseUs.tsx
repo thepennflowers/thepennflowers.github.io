@@ -117,24 +117,23 @@ const WhyChooseUs = () => {
               }}
             >
               <div
-                className="absolute inset-0 z-0 bg-gradient-to-b from-pulse-900/40 to-dark-900/80"
+                className="absolute inset-0 z-0"
                 style={{
                   backgroundImage: "url('/background-section1.png')",
                   backgroundSize: "cover",
-                  backgroundPosition: "top center",
-                  backgroundBlendMode: "overlay"
+                  backgroundPosition: "center",
                 }}
               ></div>
 
               <div className="absolute top-4 right-4 z-20">
-                <div className="inline-flex items-center justify-center px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm text-white">
+                <div className="inline-flex items-center justify-center px-4 py-2 rounded-full bg-white/60 backdrop-blur-sm text-gray-900 shadow-sm">
                   <span className="text-sm font-medium">Fresh Daily</span>
                 </div>
               </div>
 
-              <div className="relative z-10 p-5 sm:p-6 md:p-8 h-full flex items-center">
-                <div className="max-w-lg">
-                  <h3 className="text-2xl sm:text-3xl md:text-4xl font-display text-white font-bold leading-tight mb-4">
+              <div className="relative z-10 p-5 sm:p-6 md:p-8 h-full flex items-end pb-6 sm:pb-8">
+                <div className="max-w-sm bg-white/80 backdrop-blur-md p-4 sm:p-5 rounded-2xl shadow-sm w-full md:w-auto">
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-display text-gray-900 font-bold leading-tight mb-0 drop-shadow-sm">
                     We source the freshest flowers daily from local growers
                   </h3>
                 </div>
@@ -153,24 +152,23 @@ const WhyChooseUs = () => {
               }}
             >
               <div
-                className="absolute inset-0 z-0 bg-gradient-to-b from-pulse-900/40 to-dark-900/80"
+                className="absolute inset-0 z-0"
                 style={{
                   backgroundImage: "url('/background-section2.png')",
                   backgroundSize: "cover",
                   backgroundPosition: "center",
-                  backgroundBlendMode: "overlay"
                 }}
               ></div>
 
               <div className="absolute top-4 right-4 z-20">
-                <div className="inline-flex items-center justify-center px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm text-white">
+                <div className="inline-flex items-center justify-center px-4 py-2 rounded-full bg-white/60 backdrop-blur-sm text-gray-900 shadow-sm">
                   <span className="text-sm font-medium">Custom Designs</span>
                 </div>
               </div>
 
-              <div className="relative z-10 p-5 sm:p-6 md:p-8 h-full flex items-center">
-                <div className="max-w-lg">
-                  <h3 className="text-2xl sm:text-3xl md:text-4xl font-display text-white font-bold leading-tight mb-4">
+              <div className="relative z-10 p-5 sm:p-6 md:p-8 h-full flex items-end pb-6 sm:pb-8">
+                <div className="max-w-sm bg-white/80 backdrop-blur-md p-4 sm:p-5 rounded-2xl shadow-sm w-full md:w-auto">
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-display text-gray-900 font-bold leading-tight mb-0 drop-shadow-sm">
                     We create custom arrangements that tell your unique story
                   </h3>
                 </div>
@@ -189,25 +187,24 @@ const WhyChooseUs = () => {
               }}
             >
               <div
-                className="absolute inset-0 z-0 bg-gradient-to-b from-pulse-900/40 to-dark-900/80"
+                className="absolute inset-0 z-0"
                 style={{
                   backgroundImage: "url('/background-section3.png')",
                   backgroundSize: "cover",
-                  backgroundPosition: "bottom center",
-                  backgroundBlendMode: "overlay"
+                  backgroundPosition: "center",
                 }}
               ></div>
 
               <div className="absolute top-4 right-4 z-20">
-                <div className="inline-flex items-center justify-center px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm text-white">
+                <div className="inline-flex items-center justify-center px-4 py-2 rounded-full bg-white/60 backdrop-blur-sm text-gray-900 shadow-sm">
                   <span className="text-sm font-medium">Personal Touch</span>
                 </div>
               </div>
 
-              <div className="relative z-10 p-5 sm:p-6 md:p-8 h-full flex items-center">
-                <div className="max-w-lg">
-                  <h3 className="text-2xl sm:text-3xl md:text-4xl font-display text-white font-bold leading-tight mb-4">
-                    We believe every moment deserves <span className="text-[#FC4D0A]">something beautiful</span>
+              <div className="relative z-10 p-5 sm:p-6 md:p-8 h-full flex items-end pb-6 sm:pb-8">
+                <div className="max-w-sm bg-white/80 backdrop-blur-md p-4 sm:p-5 rounded-2xl shadow-sm w-full md:w-auto">
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-display text-gray-900 font-bold leading-tight mb-0 drop-shadow-sm">
+                    We believe every moment deserves <span className="text-pulse-500">something beautiful</span>
                   </h3>
                 </div>
               </div>

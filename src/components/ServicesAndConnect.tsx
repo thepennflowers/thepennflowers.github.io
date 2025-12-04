@@ -43,9 +43,13 @@ const ServicesAndConnect = () => {
               }}
             >
               <div className="absolute inset-0 bg-black/40"></div>
-              <h2 className="text-2xl sm:text-3xl font-display text-white font-bold relative z-10">
-                Our Services
-              </h2>
+              <div className="absolute inset-0 bg-black/40"></div>
+              <div className="relative z-10 mb-2">
+                <div className="pulse-chip inline-flex">
+                  <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-white text-pulse-500 mr-2">✨</span>
+                  <span>Our Services</span>
+                </div>
+              </div>
             </div>
             <div
               className="bg-white p-4 sm:p-8"
@@ -110,9 +114,13 @@ const ServicesAndConnect = () => {
               }}
             >
               <div className="absolute inset-0 bg-black/40"></div>
-              <h2 className="text-2xl sm:text-3xl font-display text-white font-bold mt-auto relative z-10">
-                Connect With Us
-              </h2>
+              <div className="absolute inset-0 bg-black/40"></div>
+              <div className="relative z-10 mt-auto">
+                <div className="pulse-chip inline-flex">
+                  <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-white text-pulse-500 mr-2">💌</span>
+                  <span>Connect With Us</span>
+                </div>
+              </div>
             </div>
 
             {/* Card Content */}

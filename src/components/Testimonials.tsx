@@ -1,5 +1,6 @@
 
 import React, { useRef } from "react";
+import reviewBackground from "@/assets/review-background.png";
 
 interface TestimonialProps {
   content: string;
@@ -67,7 +68,7 @@ const Testimonials = () => {
               <div
                 className="absolute inset-0 z-0"
                 style={{
-                  backgroundImage: `url('/review-background.png')`,
+                  backgroundImage: `url(${reviewBackground})`,
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                 }}

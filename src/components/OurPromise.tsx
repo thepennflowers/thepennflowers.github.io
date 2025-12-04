@@ -1,9 +1,38 @@
 
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
+import textMask from "@/assets/text-mask-image.jpg";
 
 const OurPromise = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.disconnect();
+      }
+    };
+  }, []);
+
   return (
-    <section className="w-full py-6 sm:py-10 bg-white" id="specifications">
+    <section
+      ref={sectionRef}
+      className="py-20 sm:py-32 bg-white relative overflow-hidden"
+      id="our-promise"
+    >
       <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
         {/* Header with badge and line */}
         <div className="flex items-center gap-4 mb-8 sm:mb-16">
@@ -17,12 +46,13 @@ const OurPromise = () => {
         </div>
 
         {/* Main content with text mask image - responsive text sizing */}
-        <div className="max-w-5xl pl-4 sm:pl-8">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display leading-tight mb-8 sm:mb-12">
-            <span className="block bg-clip-text text-transparent bg-[url('/text-mask-image.jpg')] bg-cover bg-center">
-              At ThePennFlowers, we craft every arrangement with passion to bring nature’s beauty into your life and celebrate life’s special moments.
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="mb-8 relative inline-block">
+            <span className="block bg-clip-text text-transparent bg-cover bg-center text-5xl sm:text-6xl md:text-7xl font-display font-bold leading-tight tracking-tight pb-2"
+              style={{ backgroundImage: `url(${textMask})` }}
+            >At ThePennFlowers, we craft every arrangement with passion to bring nature’s beauty into your life and celebrate life’s special moments.
             </span>
-          </h2>
+          </div>
         </div>
       </div>
     </section>

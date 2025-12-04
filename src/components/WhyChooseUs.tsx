@@ -1,5 +1,8 @@
 
 import React, { useEffect, useRef, useState } from "react";
+import bg1 from "@/assets/background-section1.png";
+import bg2 from "@/assets/background-section2.png";
+import bg3 from "@/assets/background-section3.png";
 
 const WhyChooseUs = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -119,7 +122,7 @@ const WhyChooseUs = () => {
               <div
                 className="absolute inset-0 z-0"
                 style={{
-                  backgroundImage: "url('/background-section1.png')",
+                  backgroundImage: `url(${bg1})`,
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                 }}
@@ -154,7 +157,7 @@ const WhyChooseUs = () => {
               <div
                 className="absolute inset-0 z-0"
                 style={{
-                  backgroundImage: "url('/background-section2.png')",
+                  backgroundImage: `url(${bg2})`,
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                 }}
@@ -189,7 +192,7 @@ const WhyChooseUs = () => {
               <div
                 className="absolute inset-0 z-0"
                 style={{
-                  backgroundImage: "url('/background-section3.png')",
+                  backgroundImage: `url(${bg3})`,
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                 }}

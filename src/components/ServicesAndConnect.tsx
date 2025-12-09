@@ -47,7 +47,7 @@ const ServicesAndConnect = () => {
               <div className="relative z-10 mb-2">
                 <div className="pulse-chip inline-flex">
                   <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-white text-pulse-500 mr-2">✨</span>
-                  <span>Our Services</span>
+                  <span>Our Specialties</span>
                 </div>
               </div>
             </div>
